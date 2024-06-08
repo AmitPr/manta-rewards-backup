@@ -8,7 +8,7 @@ edition = "2021"
 path = "src/lib.rs"
 
 [dependencies]
-cosmwasm-std = "1"
-cosmwasm-schema = "1.1"
-cw4 = "1.0.1"
+cosmwasm-std = "2.0"
+cosmwasm-schema = "2.0"
+cw4 = "2.0"
 thiserror = "1"

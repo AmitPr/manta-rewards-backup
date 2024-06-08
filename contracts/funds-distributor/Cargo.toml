@@ -5,9 +5,9 @@ authors = ["Terra Money <core@terra.money>"]
 edition = "2021"
 
 exclude = [
-    # Those files are rust-optimizer artifacts. You might want to commit them for convenience but they should not be part of the source code publication.
-    "contract.wasm",
-    "hash.txt",
+  # Those files are rust-optimizer artifacts. You might want to commit them for convenience but they should not be part of the source code publication.
+  "contract.wasm",
+  "hash.txt",
 ]
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
@@ -18,10 +18,6 @@ crate-type = ["cdylib", "rlib"]
 
 [features]
 default = ["contract"]
-
-# for more explicit tests, cargo test --features=backtraces
-backtraces = ["cosmwasm-std/backtraces"]
-# use contract feature to enable all instantiate/execute/query exports
 contract = []
 
 [package.metadata.scripts]
@@ -34,12 +30,12 @@ optimize = """docker run --rm -v "${process.cwd()}":/code \
 
 [dependencies]
 common = { path = "../../packages/common" }
-cosmwasm-schema = "1.1.9"
-cosmwasm-std = "1"
-cw-storage-plus = "1.0.1"
-cw-utils = "1.0"
-cw2 = "1.0.1"
-cw4 = "1.0.1"
-cw-asset = "2.4.0"
+cosmwasm-schema = "2.0"
+cosmwasm-std = "2.0"
+cw-storage-plus = "2.0"
+cw-utils = "2.0"
+cw2 = "2.0"
+cw4 = "2.0"
+cw-asset = "3.1"
 itertools = "0.10.5"
 funds-distributor-api = { path = "../../packages/funds-distributor-api" }

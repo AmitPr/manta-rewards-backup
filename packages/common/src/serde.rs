@@ -15,7 +15,7 @@ pub trait SerdeExt {
     where
         Self: Sized + Serialize,
     {
-        self.to_vec().map(Binary)
+        self.to_vec().map(Binary::from)
     }
 }
 

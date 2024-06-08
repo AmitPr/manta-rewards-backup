@@ -28,7 +28,7 @@ pub fn calculate_new_user_reward(
     user_index: Decimal,
     user_weight: Uint128,
 ) -> Uint128 {
-    global_index.sub(user_index).mul(user_weight)
+    user_weight.mul_floor(global_index.sub(user_index))
 }
 
 pub fn query_user_rewards(

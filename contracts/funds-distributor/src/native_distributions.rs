@@ -30,7 +30,7 @@ impl IndexList<NativeDistribution> for NativeDistributionIndexes<'_> {
 
 #[allow(non_snake_case)]
 pub fn NATIVE_DISTRIBUTIONS<'a>(
-) -> IndexedMap<'a, (Addr, String), NativeDistribution, NativeDistributionIndexes<'a>> {
+) -> IndexedMap<(Addr, String), NativeDistribution, NativeDistributionIndexes<'a>> {
     let indexes = NativeDistributionIndexes {
         user: MultiIndex::new(
             |_, native_distribution| native_distribution.user.clone(),

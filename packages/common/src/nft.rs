@@ -152,6 +152,6 @@ pub struct QueryAllTokensMsg {
 
 pub type Extension = Option<Metadata>;
 pub type ExecuteMsg = cw721_base::ExecuteMsg<Extension, Empty>;
-pub type MintMsg = cw721_base::MintMsg<Extension>;
+// pub type MintMsg = cw721_base::MintMsg<Extension>;
 pub use cw721::TokensResponse;
 pub use cw721_base::{ContractError, InstantiateMsg, MinterResponse, QueryMsg};
